@@ -7,11 +7,11 @@ on:
 
 jobs:
   kics-scan:
-    runs-on: cx-public-ubuntu-x64
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run KICS Scan
-        uses: checkmarx/kics-github-action@4063ea7186bec9fed1bf055e095a4658693f9998 # v2.1.20
+        uses: checkmarx/kics-github-action@fe35470377b09d56b3a887701e2bbcb67d5b8d86 # fix-kics-github-action branch
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: "./Dockerfile"
